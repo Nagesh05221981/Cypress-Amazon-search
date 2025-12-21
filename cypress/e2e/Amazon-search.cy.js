@@ -11,6 +11,12 @@ describe("load amazon and search bose",()=>{
     // Assert at least one result has a title
         cy.get('.s-result-item').filter(':has(h2)').should('have.length.greaterThan', 0);
 
+        // ✅ Validate that at least one result contains "Bose QuietComfort"
+        const found = titles.some(title =>
+          title.toLowerCase().includes('bose quietcomfort')
+        );
+        expect(found).to.be.true;
+
 
     })
 
