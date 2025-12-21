@@ -13,7 +13,7 @@ describe("load amazon and search bose",()=>{
 
         // ✅ Validate that at least one result contains "Bose QuietComfort"
         const found = titles.some(title =>
-          title.toLowerCase().includes('bose quietcomfort')
+          title.toLowerCase().includes('Bose quietcomfort')
         );
         expect(found).to.be.true;
 
